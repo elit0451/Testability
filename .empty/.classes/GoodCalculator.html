@@ -1,0 +1,171 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: GoodCalculator</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">&lt;empty package name&gt;</a> ]
+</div>
+
+<h1>Coverage Summary for Class: GoodCalculator (&lt;empty package name&gt;)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">GoodCalculator</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    87.5%
+  </span>
+  <span class="absValue">
+    (7/ 8)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    95.2%
+  </span>
+  <span class="absValue">
+    (20/ 21)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;public final class GoodCalculator {
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;    /**
+<i>4</i>&nbsp;     * Overrides default constructor.
+<i>5</i>&nbsp;     */
+<b class="nc"><i>6</i>&nbsp;    private GoodCalculator() { }</b>
+<i>7</i>&nbsp;
+<i>8</i>&nbsp;    /**
+<i>9</i>&nbsp;     * @param v1 first number
+<i>10</i>&nbsp;     * @param v2 second number
+<i>11</i>&nbsp;     * @return sum of 2 numbers
+<i>12</i>&nbsp;     */
+<i>13</i>&nbsp;    protected static int add(final int v1, final int v2) {
+<b class="fc"><i>14</i>&nbsp;        return v1 + v2;</b>
+<i>15</i>&nbsp;    }
+<i>16</i>&nbsp;
+<i>17</i>&nbsp;    /**
+<i>18</i>&nbsp;     * @param v1 first number
+<i>19</i>&nbsp;     * @param v2 second number
+<i>20</i>&nbsp;     * @return product of subtracting 2 numbers
+<i>21</i>&nbsp;     */
+<i>22</i>&nbsp;    protected static int subtract(final int v1, final int v2) {
+<b class="fc"><i>23</i>&nbsp;        return v1 - v2;</b>
+<i>24</i>&nbsp;    }
+<i>25</i>&nbsp;
+<i>26</i>&nbsp;    /**
+<i>27</i>&nbsp;     * @param numbers array of numbers
+<i>28</i>&nbsp;     * @return sum of the numbers
+<i>29</i>&nbsp;     */
+<i>30</i>&nbsp;    protected static int sum(final int[] numbers) {
+<b class="fc"><i>31</i>&nbsp;        int allSum = 0;</b>
+<b class="fc"><i>32</i>&nbsp;        for (int i = 0; i &lt; numbers.length; i++) {</b>
+<b class="fc"><i>33</i>&nbsp;            allSum = allSum + numbers[i];</b>
+<i>34</i>&nbsp;        }
+<b class="fc"><i>35</i>&nbsp;        return allSum;</b>
+<i>36</i>&nbsp;    }
+<i>37</i>&nbsp;
+<i>38</i>&nbsp;    /**
+<i>39</i>&nbsp;     * @param v1 first number
+<i>40</i>&nbsp;     * @param v2 second number
+<i>41</i>&nbsp;     * @return product of the multiplication of 2 numbers
+<i>42</i>&nbsp;     */
+<i>43</i>&nbsp;    protected static int multiply(final int v1, final int v2) {
+<b class="fc"><i>44</i>&nbsp;        return v1 * v2;</b>
+<i>45</i>&nbsp;    }
+<i>46</i>&nbsp;
+<i>47</i>&nbsp;    /**
+<i>48</i>&nbsp;     * @param v1 first number
+<i>49</i>&nbsp;     * @param v2 second number
+<i>50</i>&nbsp;     * @return product of the multiplication of 2 numbers
+<i>51</i>&nbsp;     */
+<i>52</i>&nbsp;    protected static int divide(final int v1, final int v2) {
+<b class="fc"><i>53</i>&nbsp;        if (v2 == 0) {</b>
+<b class="fc"><i>54</i>&nbsp;            throw new IllegalArgumentException();</b>
+<i>55</i>&nbsp;        }
+<i>56</i>&nbsp;
+<b class="fc"><i>57</i>&nbsp;        return v1 / v2;</b>
+<i>58</i>&nbsp;    }
+<i>59</i>&nbsp;
+<i>60</i>&nbsp;    /**
+<i>61</i>&nbsp;     * @param v1 number
+<i>62</i>&nbsp;     * @param v2 exponent
+<i>63</i>&nbsp;     * @return product of the power of a number and an exponent
+<i>64</i>&nbsp;     */
+<i>65</i>&nbsp;    protected static int power(final int v1, final int v2) {
+<b class="fc"><i>66</i>&nbsp;        int allSum = 1;</b>
+<b class="fc"><i>67</i>&nbsp;        for (int i = 0; i &lt; v2; i++) {</b>
+<b class="fc"><i>68</i>&nbsp;            allSum = allSum * v1;</b>
+<i>69</i>&nbsp;        }
+<b class="fc"><i>70</i>&nbsp;        return allSum;</b>
+<i>71</i>&nbsp;    }
+<i>72</i>&nbsp;
+<i>73</i>&nbsp;    /**
+<i>74</i>&nbsp;     * @param v number
+<i>75</i>&nbsp;     * @return factorial result of a number
+<i>76</i>&nbsp;     */
+<i>77</i>&nbsp;    protected static int factorial(final int v) {
+<b class="fc"><i>78</i>&nbsp;        if (v &lt; 0) {</b>
+<b class="fc"><i>79</i>&nbsp;            throw new IllegalArgumentException();</b>
+<i>80</i>&nbsp;        }
+<i>81</i>&nbsp;
+<b class="fc"><i>82</i>&nbsp;        int allSum = 1;</b>
+<b class="fc"><i>83</i>&nbsp;        for (int i = v; i &gt; 0; i--) {</b>
+<b class="fc"><i>84</i>&nbsp;            allSum = allSum * i;</b>
+<i>85</i>&nbsp;        }
+<b class="fc"><i>86</i>&nbsp;        return allSum;</b>
+<i>87</i>&nbsp;    }
+<i>88</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2019-06-12 18:48</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GoodCalculator.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">3</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">GoodCalculator.java</span></div><h1>GoodCalculator.java</h1><pre class="source lang-java linenums">public final class GoodCalculator {
+
+    /**
+     * Overrides default constructor.
+     */
+    private GoodCalculator() { }
+
+    /**
+     * @param v1 first number
+     * @param v2 second number
+     * @return sum of 2 numbers
+     */
+    protected static int add(final int v1, final int v2) {
+<span class="fc" id="L14">        return v1 + v2;</span>
+    }
+
+    /**
+     * @param v1 first number
+     * @param v2 second number
+     * @return product of subtracting 2 numbers
+     */
+    protected static int subtract(final int v1, final int v2) {
+<span class="fc" id="L23">        return v1 - v2;</span>
+    }
+
+    /**
+     * @param numbers array of numbers
+     * @return sum of the numbers
+     */
+    protected static int sum(final int[] numbers) {
+<span class="fc" id="L31">        int allSum = 0;</span>
+<span class="fc bfc" id="L32" title="All 2 branches covered.">        for (int i = 0; i &lt; numbers.length; i++) {</span>
+<span class="fc" id="L33">            allSum = allSum + numbers[i];</span>
+        }
+<span class="fc" id="L35">        return allSum;</span>
+    }
+
+    /**
+     * @param v1 first number
+     * @param v2 second number
+     * @return product of the multiplication of 2 numbers
+     */
+    protected static int multiply(final int v1, final int v2) {
+<span class="fc" id="L44">        return v1 * v2;</span>
+    }
+
+    /**
+     * @param v1 first number
+     * @param v2 second number
+     * @return product of the multiplication of 2 numbers
+     */
+    protected static int divide(final int v1, final int v2) {
+<span class="fc bfc" id="L53" title="All 2 branches covered.">        if (v2 == 0) {</span>
+<span class="fc" id="L54">            throw new IllegalArgumentException();</span>
+        }
+
+<span class="fc" id="L57">        return v1 / v2;</span>
+    }
+
+    /**
+     * @param v1 number
+     * @param v2 exponent
+     * @return product of the power of a number and an exponent
+     */
+    protected static int power(final int v1, final int v2) {
+<span class="fc" id="L66">        int allSum = 1;</span>
+<span class="fc bfc" id="L67" title="All 2 branches covered.">        for (int i = 0; i &lt; v2; i++) {</span>
+<span class="fc" id="L68">            allSum = allSum * v1;</span>
+        }
+<span class="fc" id="L70">        return allSum;</span>
+    }
+
+    /**
+     * @param v number
+     * @return factorial result of a number
+     */
+    protected static int factorial(final int v) {
+<span class="fc bfc" id="L78" title="All 2 branches covered.">        if (v &lt; 0) {</span>
+<span class="fc" id="L79">            throw new IllegalArgumentException();</span>
+        }
+
+<span class="fc" id="L82">        int allSum = 1;</span>
+<span class="fc bfc" id="L83" title="All 2 branches covered.">        for (int i = v; i &gt; 0; i--) {</span>
+<span class="fc" id="L84">            allSum = allSum * i;</span>
+        }
+<span class="fc" id="L86">        return allSum;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

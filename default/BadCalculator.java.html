@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BadCalculator.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">jacoco-unit.exec</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">BadCalculator.java</span></div><h1>BadCalculator.java</h1><pre class="source lang-java linenums"><span class="nc" id="L1">public class BadCalculator {</span>
+
+    public static void add(int v1, int v2) {
+<span class="nc" id="L4">        System.out.print(v1+v2);</span>
+<span class="nc" id="L5">    }</span>
+
+    public static void subtract(int v1, int v2) {
+<span class="nc" id="L8">        System.out.print(v1-v2);</span>
+<span class="nc" id="L9">    }</span>
+
+    public static void sum(int[] numbers) {
+<span class="nc" id="L12">        int allSum=0;</span>
+<span class="nc bnc" id="L13" title="All 2 branches missed.">        for (int i=0; i&lt;numbers.length; i++) {</span>
+<span class="nc" id="L14">            allSum=allSum+numbers[i];</span>
+        }
+<span class="nc" id="L16">        System.out.print(allSum);</span>
+<span class="nc" id="L17">    }</span>
+
+    public static void multiply(int v1, int v2) {
+<span class="nc" id="L20">        System.out.print(v1 * v2);</span>
+<span class="nc" id="L21">    }</span>
+
+    public static void power(int v1, int v2) {
+<span class="nc" id="L24">        int allSum=1;</span>
+<span class="nc bnc" id="L25" title="All 2 branches missed.">        for (int i=0; i&lt;v2; i++) {</span>
+<span class="nc" id="L26">            allSum = allSum * v1;</span>
+        }
+<span class="nc" id="L28">        System.out.print(allSum);</span>
+<span class="nc" id="L29">    }</span>
+
+    public static void factorial(int v) {
+<span class="nc" id="L32">        int allSum = 1;</span>
+<span class="nc bnc" id="L33" title="All 2 branches missed.">        for (int i = v; i &gt; 0; i--) {</span>
+<span class="nc" id="L34">            allSum = allSum * i;</span>
+        }
+<span class="nc" id="L36">        System.out.print(allSum);</span>
+<span class="nc" id="L37">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>
